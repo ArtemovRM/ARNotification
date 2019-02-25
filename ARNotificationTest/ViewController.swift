@@ -17,10 +17,20 @@ class ViewController: UIViewController {
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 
-	@IBAction func buttonClicked() {
+	@IBAction func errorClicked() {
 		notification.push(type: .error, title: "Невозможно получить данные с сервера Проверьте соединение с интернетом")
 	}
 	
-
+	@IBAction func successClicked() {
+		notification.push(type: .success, title: "Успех успехов")
+	}
+	
+	@IBAction func infoClicked() {
+		notification.push(type: .info, title: "Информационное уведомление")
+	}
+	
+	@IBAction func warningClicked() {
+		notification.push(type: .warning, title: "Внимание! спасибо за внимание")
+	}
 }
 
