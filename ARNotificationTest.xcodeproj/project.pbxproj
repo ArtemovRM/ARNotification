@@ -16,6 +16,8 @@
 		30922879222449BB006F33D7 /* ARNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30922878222449BB006F33D7 /* ARNotificationView.swift */; };
 		3092287B222449DB006F33D7 /* ARNotificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3092287A222449DB006F33D7 /* ARNotificationView.xib */; };
 		3092287D222449F4006F33D7 /* ARNotificationWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3092287C222449F4006F33D7 /* ARNotificationWrapperView.swift */; };
+		3092287F22250B58006F33D7 /* ARNotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3092287E22250B58006F33D7 /* ARNotificationSettings.swift */; };
+		3092288122250BBE006F33D7 /* ARNotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3092288022250BBE006F33D7 /* ARNotificationType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		30922878222449BB006F33D7 /* ARNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNotificationView.swift; sourceTree = "<group>"; };
 		3092287A222449DB006F33D7 /* ARNotificationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARNotificationView.xib; sourceTree = "<group>"; };
 		3092287C222449F4006F33D7 /* ARNotificationWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNotificationWrapperView.swift; sourceTree = "<group>"; };
+		3092287E22250B58006F33D7 /* ARNotificationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNotificationSettings.swift; sourceTree = "<group>"; };
+		3092288022250BBE006F33D7 /* ARNotificationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNotificationType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				309228762224498E006F33D7 /* ARNotification.swift */,
 				30922878222449BB006F33D7 /* ARNotificationView.swift */,
 				3092287C222449F4006F33D7 /* ARNotificationWrapperView.swift */,
+				3092287E22250B58006F33D7 /* ARNotificationSettings.swift */,
+				3092288022250BBE006F33D7 /* ARNotificationType.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -159,7 +165,9 @@
 				30922879222449BB006F33D7 /* ARNotificationView.swift in Sources */,
 				3092286622244947006F33D7 /* ViewController.swift in Sources */,
 				3092286422244947006F33D7 /* AppDelegate.swift in Sources */,
+				3092288122250BBE006F33D7 /* ARNotificationType.swift in Sources */,
 				309228772224498E006F33D7 /* ARNotification.swift in Sources */,
+				3092287F22250B58006F33D7 /* ARNotificationSettings.swift in Sources */,
 				3092287D222449F4006F33D7 /* ARNotificationWrapperView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
