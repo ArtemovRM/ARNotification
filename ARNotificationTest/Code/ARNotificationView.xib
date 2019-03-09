@@ -37,10 +37,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="cnl-Va-vXa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2KU-Am-WZn"/>
+                <constraint firstItem="cnl-Va-vXa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2KU-Am-WZn"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PqU-KZ-R76" secondAttribute="trailing" constant="16" id="4gM-A3-jjI"/>
-                <constraint firstItem="cnl-Va-vXa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Iqz-xD-iBe"/>
-                <constraint firstItem="cnl-Va-vXa" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="gB7-D9-FfK"/>
+                <constraint firstItem="cnl-Va-vXa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Iqz-xD-iBe"/>
+                <constraint firstItem="cnl-Va-vXa" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="gB7-D9-FfK"/>
                 <constraint firstItem="PqU-KZ-R76" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="i1s-q7-twp"/>
                 <constraint firstItem="PqU-KZ-R76" firstAttribute="leading" secondItem="cnl-Va-vXa" secondAttribute="trailing" constant="16" id="oov-Sr-Wm4"/>
             </constraints>
