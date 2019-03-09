@@ -30,15 +30,15 @@ class ARNotificationShadowWrapperView<T: UIView>: UIView {
 		insideView = T(frame: bounds)
 		addSubview(insideView)
 		
-		defaultSettings()
+		insideView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
 	}
 	
-	private func defaultSettings() {
+	override func layoutSubviews() {
 		layer.shadowColor = UIColor.black.cgColor
 		layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: radius).cgPath
 		layer.shadowOffset = CGSize.zero
-		layer.shadowOpacity = 0.4
-		layer.shadowRadius = 6
+		layer.shadowOpacity = 0.2
+		layer.shadowRadius = 4
 		layer.shouldRasterize = true
 		layer.rasterizationScale = UIScreen.main.scale
 	}

@@ -21,33 +21,46 @@ class ARNotification {
 	private init() { }
 	
 	func push(type: ARNotificationType, title: String) {
-		let width = window!.rootViewController!.view.frame.size.width
-		let height = window!.rootViewController!.view.frame.size.height
+		guard let window = self.window,
+			let width = window.rootViewController?.view.frame.size.width,
+			let height = window.rootViewController?.view.frame.size.height else {
+			print("ARNotification error: window not set!")
+				
+			return
+		}
 		
 		let frame = CGRect(x: settings.minimumLRPadding,
-						   y: height + 20,
-						   width: width - (settings.minimumLRPadding * 2),
+						   y: height,
+						   width: width,
 						   height: settings.minimumHeight)
-		
 		
 		let view = ARNotificationShadowWrapperView<ARNotificationView>(frame: frame)
 		view.insideView.colors = settings.colors
 		view.insideView.setNotification(type: type, title: title)
 		
-		self.window?.addSubview(view)
+		window.addSubview(view)
+		
+		view.translatesAutoresizingMaskIntoConstraints = false
+		let bottomConstraint = view.bottomAnchor.constraint(equalTo: window.safeAreaLayoutGuide.bottomAnchor)
+		bottomConstraint.isActive = true
+		
+		view.leftAnchor.constraint(equalTo: window.safeAreaLayoutGuide.leftAnchor, constant: settings.minimumLRPadding).isActive = true
+		view.rightAnchor.constraint(equalTo: window.safeAreaLayoutGuide.rightAnchor, constant: -settings.minimumLRPadding).isActive = true
+		view.heightAnchor.constraint(equalToConstant: settings.minimumHeight).isActive = true
+		
+		bottomConstraint.constant = -self.settings.minimumPadding
 		
 		UIView.animate(withDuration: settings.duration, animations: { [unowned self] in
-			view.frame.origin.y = height - self.settings.minimumPadding
-			
 			self.window?.layoutIfNeeded()
-			}, completion: { [weak view] _ in
-				DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-					UIView.animate(withDuration: self.settings.duration, animations: {
-						view?.frame.origin.y = height + 20
-					}, completion: { _ in
-						view?.removeFromSuperview()
-					})
+		}, completion: { [weak view] _ in
+			DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+				bottomConstraint.constant = self.settings.minimumPadding
+				UIView.animate(withDuration: self.settings.duration, animations: {
+					self.window?.layoutIfNeeded()
+				}, completion: { _ in
+					view?.removeFromSuperview()
 				})
+			})
 		})
 	}
 }

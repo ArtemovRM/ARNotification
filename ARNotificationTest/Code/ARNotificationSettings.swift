@@ -15,10 +15,10 @@ struct ARNotificationSettings {
 	var minimumHeight: CGFloat = 66.0
 	
 	/// Минимальный отступ
-	var minimumPadding: CGFloat = 180
+	var minimumPadding: CGFloat = 120
 	
 	/// Минимальный отступ от краев
-	var minimumLRPadding: CGFloat = 16.0
+	var minimumLRPadding: CGFloat = 8.0
 	
 	/// Время исполнения анимации(в одну сторону)
 	var duration: Double = 0.5
