@@ -8,17 +8,11 @@
 
 import UIKit
 
-class ARNotificationWrapperView: UIView {
+class ARNotificationShadowWrapperView<T: UIView>: UIView {
 	
-	let radius: CGFloat = 4
+	var radius: CGFloat = 4
 	
-	var colors: [ARNotificationType:UIColor]! {
-		didSet {
-			notificationView.colors = self.colors
-		}
-	}
-	
-	private var notificationView: ARNotificationView!
+	var insideView: T!
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -32,13 +26,9 @@ class ARNotificationWrapperView: UIView {
 		initView()
 	}
 	
-	func setNotification(type: ARNotificationType, title: String) {
-		notificationView.setNotification(type: type, title: title)
-	}
-	
 	private func initView() {
-		notificationView = ARNotificationView(frame: bounds)
-		addSubview(notificationView)
+		insideView = T(frame: bounds)
+		addSubview(insideView)
 		
 		defaultSettings()
 	}

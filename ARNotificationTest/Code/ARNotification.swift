@@ -29,9 +29,10 @@ class ARNotification {
 						   width: width - (settings.minimumLRPadding * 2),
 						   height: settings.minimumHeight)
 		
-		let view = ARNotificationWrapperView(frame: frame)
-		view.colors = settings.colors
-		view.setNotification(type: type, title: title)
+		
+		let view = ARNotificationShadowWrapperView<ARNotificationView>(frame: frame)
+		view.insideView.colors = settings.colors
+		view.insideView.setNotification(type: type, title: title)
 		
 		self.window?.addSubview(view)
 		
