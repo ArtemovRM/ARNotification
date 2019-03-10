@@ -22,17 +22,11 @@ class ARNotification {
 	
 	func push(type: ARNotificationType, title: String) {
 		guard let window = self.window,
-			let width = window.rootViewController?.view.frame.size.width,
-			let height = window.rootViewController?.view.frame.size.height else {
+			let frame = self.expectedFrame() else {
 			print("ARNotification error: window not set!")
 				
 			return
 		}
-		
-		let frame = CGRect(x: settings.minimumLRPadding,
-						   y: height,
-						   width: width,
-						   height: settings.minimumHeight)
 		
 		let view = ARNotificationShadowWrapperView<ARNotificationView>(frame: frame)
 		view.insideView.colors = settings.colors
@@ -40,21 +34,37 @@ class ARNotification {
 		
 		window.addSubview(view)
 		
+		let safeArea = window.safeAreaLayoutGuide
+		
 		view.translatesAutoresizingMaskIntoConstraints = false
-		let bottomConstraint = view.bottomAnchor.constraint(equalTo: window.safeAreaLayoutGuide.bottomAnchor)
-		bottomConstraint.isActive = true
-		
-		view.leftAnchor.constraint(equalTo: window.safeAreaLayoutGuide.leftAnchor, constant: settings.minimumLRPadding).isActive = true
-		view.rightAnchor.constraint(equalTo: window.safeAreaLayoutGuide.rightAnchor, constant: -settings.minimumLRPadding).isActive = true
+		view.leftAnchor.constraint(equalTo: safeArea.leftAnchor, constant: settings.minimumLRPadding).isActive = true
+		view.rightAnchor.constraint(equalTo: safeArea.rightAnchor, constant: -settings.minimumLRPadding).isActive = true
 		view.heightAnchor.constraint(equalToConstant: settings.minimumHeight).isActive = true
-		
-		bottomConstraint.constant = -self.settings.minimumPadding
-		
+
+		switch settings.position {
+		case .bottom:
+			let bottomConstraint = view.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor)
+			bottomConstraint.isActive = true
+			
+			bottomConstraint.constant = -self.settings.minimumPadding
+			
+			animateNotificationView(view: view, constraint: bottomConstraint)
+			
+		case .top:
+			let topConstraint = view.topAnchor.constraint(equalTo: safeArea.topAnchor)
+			topConstraint.isActive = true
+			
+			topConstraint.constant = self.settings.minimumPadding
+			animateNotificationView(view: view, constraint: topConstraint)
+		}
+	}
+	
+	private func animateNotificationView(view: UIView, constraint: NSLayoutConstraint) {
 		UIView.animate(withDuration: settings.duration, animations: { [unowned self] in
 			self.window?.layoutIfNeeded()
 		}, completion: { [weak view] _ in
-			DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-				bottomConstraint.constant = self.settings.minimumPadding
+			DispatchQueue.main.asyncAfter(deadline: .now() + self.settings.waiting, execute: {
+				constraint.constant = -constraint.constant
 				UIView.animate(withDuration: self.settings.duration, animations: {
 					self.window?.layoutIfNeeded()
 				}, completion: { _ in
@@ -62,6 +72,22 @@ class ARNotification {
 				})
 			})
 		})
+	}
+	
+	private func expectedFrame() -> CGRect? {
+		guard let window = self.window,
+			let width = window.rootViewController?.view.frame.size.width,
+			let height = window.rootViewController?.view.frame.size.height else {
+			
+			return nil
+		}
+		
+		let safeInsets = window.safeAreaInsets
+		
+		return CGRect(x: safeInsets.left + settings.minimumLRPadding,
+					  y: settings.position == .bottom ? height : -settings.minimumPadding,
+					  width: width - (safeInsets.left + (settings.minimumLRPadding * 2) + safeInsets.right),
+					  height: settings.minimumHeight)
 	}
 }
 
