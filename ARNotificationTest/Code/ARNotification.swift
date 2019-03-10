@@ -34,25 +34,45 @@ class ARNotification {
 		
 		window.addSubview(view)
 		
-		let safeArea = window.safeAreaLayoutGuide
-		
 		view.translatesAutoresizingMaskIntoConstraints = false
-		view.leftAnchor.constraint(equalTo: safeArea.leftAnchor, constant: settings.minimumLRPadding).isActive = true
-		view.rightAnchor.constraint(equalTo: safeArea.rightAnchor, constant: -settings.minimumLRPadding).isActive = true
-		view.heightAnchor.constraint(equalToConstant: settings.minimumHeight).isActive = true
-
-		switch settings.position {
-		case .bottom:
-			let bottomConstraint = view.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -self.settings.minimumPadding)
-			bottomConstraint.isActive = true
+		
+		if #available(iOS 11.0, *) {
+			let safeArea = window.safeAreaLayoutGuide
+			view.leftAnchor.constraint(equalTo: safeArea.leftAnchor, constant: settings.minimumLRPadding).isActive = true
+			view.rightAnchor.constraint(equalTo: safeArea.rightAnchor, constant: -settings.minimumLRPadding).isActive = true
+			view.heightAnchor.constraint(equalToConstant: settings.minimumHeight).isActive = true
 			
-			animateNotificationView(view: view, constraint: bottomConstraint)
+			switch settings.position {
+			case .bottom:
+				let bottomConstraint = view.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -self.settings.minimumPadding)
+				bottomConstraint.isActive = true
+				
+				animateNotificationView(view: view, constraint: bottomConstraint)
+				
+			case .top:
+				let topConstraint = view.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: self.settings.minimumPadding)
+				topConstraint.isActive = true
+				
+				animateNotificationView(view: view, constraint: topConstraint)
+			}
+		} else {
+			view.leftAnchor.constraint(equalTo: window.leftAnchor, constant: settings.minimumLRPadding).isActive = true
+			view.rightAnchor.constraint(equalTo: window.rightAnchor, constant: -settings.minimumLRPadding).isActive = true
+			view.heightAnchor.constraint(equalToConstant: settings.minimumHeight).isActive = true
 			
-		case .top:
-			let topConstraint = view.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: self.settings.minimumPadding)
-			topConstraint.isActive = true
-			
-			animateNotificationView(view: view, constraint: topConstraint)
+			switch settings.position {
+			case .bottom:
+				let bottomConstraint = view.bottomAnchor.constraint(equalTo: window.bottomAnchor, constant: -self.settings.minimumPadding)
+				bottomConstraint.isActive = true
+				
+				animateNotificationView(view: view, constraint: bottomConstraint)
+				
+			case .top:
+				let topConstraint = view.topAnchor.constraint(equalTo: window.topAnchor, constant: self.settings.minimumPadding)
+				topConstraint.isActive = true
+				
+				animateNotificationView(view: view, constraint: topConstraint)
+			}
 		}
 	}
 	
@@ -79,12 +99,19 @@ class ARNotification {
 			return nil
 		}
 		
-		let safeInsets = window.safeAreaInsets
-		
-		return CGRect(x: safeInsets.left + settings.minimumLRPadding,
-					  y: settings.position == .bottom ? height : -settings.minimumPadding,
-					  width: width - (safeInsets.left + (settings.minimumLRPadding * 2) + safeInsets.right),
-					  height: settings.minimumHeight)
+		if #available(iOS 11.0, *) {
+			let safeInsets = window.safeAreaInsets
+			
+			return CGRect(x: safeInsets.left + settings.minimumLRPadding,
+						  y: settings.position == .bottom ? height : -settings.minimumPadding,
+						  width: width - (safeInsets.left + (settings.minimumLRPadding * 2) + safeInsets.right),
+						  height: settings.minimumHeight)
+		} else {
+			return CGRect(x: settings.minimumLRPadding,
+						  y: settings.position == .bottom ? height : -settings.minimumPadding,
+						  width: width - (settings.minimumLRPadding * 2),
+						  height: settings.minimumHeight)
+		}
 	}
 }
 
