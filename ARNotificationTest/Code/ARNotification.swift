@@ -43,18 +43,15 @@ class ARNotification {
 
 		switch settings.position {
 		case .bottom:
-			let bottomConstraint = view.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor)
+			let bottomConstraint = view.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -self.settings.minimumPadding)
 			bottomConstraint.isActive = true
-			
-			bottomConstraint.constant = -self.settings.minimumPadding
 			
 			animateNotificationView(view: view, constraint: bottomConstraint)
 			
 		case .top:
-			let topConstraint = view.topAnchor.constraint(equalTo: safeArea.topAnchor)
+			let topConstraint = view.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: self.settings.minimumPadding)
 			topConstraint.isActive = true
 			
-			topConstraint.constant = self.settings.minimumPadding
 			animateNotificationView(view: view, constraint: topConstraint)
 		}
 	}
