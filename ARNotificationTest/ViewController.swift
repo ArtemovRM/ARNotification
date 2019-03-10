@@ -10,11 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	@IBOutlet weak var segmentedControl: UISegmentedControl!
+	
 	var notification = ARNotification.shared
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		
+		segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged), for: .valueChanged)
 	}
 
 	@IBAction func errorClicked() {
@@ -30,7 +33,14 @@ class ViewController: UIViewController {
 	}
 	
 	@IBAction func warningClicked() {
-		notification.push(type: .warning, title: "Внимание! спасибо за внимание")
+		notification.push(type: .warning, title: "Внимание! Спасибо за внимание")
+	}
+	
+	@objc private func segmentedControlValueChanged(sender: UISegmentedControl) {
+		var settings = ARNotificationSettings()
+		settings.position = sender.selectedSegmentIndex == 0 ? ARNotificationPosition.top : ARNotificationPosition.bottom
+		
+		ARNotification.shared.settings = settings
 	}
 }
 

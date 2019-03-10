@@ -61,16 +61,31 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KnL-UJ-PGD">
+                                <rect key="frame" x="128" y="371.5" width="119" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="QZI-B5-EwL"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Top"/>
+                                    <segment title="Bottom"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="KnL-UJ-PGD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B6B-Gp-ecb"/>
                             <constraint firstItem="egI-16-6d0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="O1s-lX-uOa"/>
+                            <constraint firstItem="KnL-UJ-PGD" firstAttribute="top" secondItem="egI-16-6d0" secondAttribute="bottom" constant="8" id="X3X-R1-8IP"/>
                             <constraint firstItem="egI-16-6d0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="faa-cH-7hu"/>
                             <constraint firstItem="egI-16-6d0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="klx-3X-0dd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="egI-16-6d0" secondAttribute="trailing" constant="8" id="wT3-Zz-Rny"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="segmentedControl" destination="KnL-UJ-PGD" id="gte-8d-8A6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
