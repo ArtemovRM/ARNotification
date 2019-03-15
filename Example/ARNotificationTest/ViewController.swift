@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ARNotification
 
 class ViewController: UIViewController {
 

@@ -1,0 +1,16 @@
+PODS:
+  - ARNotification (0.0.1)
+
+DEPENDENCIES:
+  - ARNotification (from `../`)
+
+EXTERNAL SOURCES:
+  ARNotification:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ARNotification: eaff5be39a70810c67e9524492bab78c8146a4c6
+
+PODFILE CHECKSUM: 847b026fe4119895699c9bb31dbc1fc83bce7a49
+
+COCOAPODS: 1.6.1

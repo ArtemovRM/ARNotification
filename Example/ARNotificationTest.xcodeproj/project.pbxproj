@@ -7,17 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BB77FE93D4E45449BCDA0B8 /* Pods_ARNotificationTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629A639E3755765C24A34F82 /* Pods_ARNotificationTest.framework */; };
 		3092286422244947006F33D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3092286322244947006F33D7 /* AppDelegate.swift */; };
 		3092286622244947006F33D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3092286522244947006F33D7 /* ViewController.swift */; };
 		3092286922244947006F33D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3092286722244947006F33D7 /* Main.storyboard */; };
 		3092286B22244948006F33D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3092286A22244948006F33D7 /* Assets.xcassets */; };
 		3092286E22244948006F33D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3092286C22244948006F33D7 /* LaunchScreen.storyboard */; };
-		309228772224498E006F33D7 /* ARNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309228762224498E006F33D7 /* ARNotification.swift */; };
-		30922879222449BB006F33D7 /* ARNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30922878222449BB006F33D7 /* ARNotificationView.swift */; };
-		3092287B222449DB006F33D7 /* ARNotificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3092287A222449DB006F33D7 /* ARNotificationView.xib */; };
-		3092287D222449F4006F33D7 /* ARNotificationShadowWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3092287C222449F4006F33D7 /* ARNotificationShadowWrapperView.swift */; };
-		3092287F22250B58006F33D7 /* ARNotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3092287E22250B58006F33D7 /* ARNotificationSettings.swift */; };
-		3092288122250BBE006F33D7 /* ARNotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3092288022250BBE006F33D7 /* ARNotificationType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,12 +23,9 @@
 		3092286A22244948006F33D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3092286D22244948006F33D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3092286F22244948006F33D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		309228762224498E006F33D7 /* ARNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNotification.swift; sourceTree = "<group>"; };
-		30922878222449BB006F33D7 /* ARNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNotificationView.swift; sourceTree = "<group>"; };
-		3092287A222449DB006F33D7 /* ARNotificationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARNotificationView.xib; sourceTree = "<group>"; };
-		3092287C222449F4006F33D7 /* ARNotificationShadowWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNotificationShadowWrapperView.swift; sourceTree = "<group>"; };
-		3092287E22250B58006F33D7 /* ARNotificationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNotificationSettings.swift; sourceTree = "<group>"; };
-		3092288022250BBE006F33D7 /* ARNotificationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNotificationType.swift; sourceTree = "<group>"; };
+		629A639E3755765C24A34F82 /* Pods_ARNotificationTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARNotificationTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A1093A5D4E77FFA77F33649 /* Pods-ARNotificationTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARNotificationTest.debug.xcconfig"; path = "Target Support Files/Pods-ARNotificationTest/Pods-ARNotificationTest.debug.xcconfig"; sourceTree = "<group>"; };
+		EDC1F45E2D39B4D369D21194 /* Pods-ARNotificationTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARNotificationTest.release.xcconfig"; path = "Target Support Files/Pods-ARNotificationTest/Pods-ARNotificationTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +33,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BB77FE93D4E45449BCDA0B8 /* Pods_ARNotificationTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D3B2CDD8F720E9CE413682C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A1093A5D4E77FFA77F33649 /* Pods-ARNotificationTest.debug.xcconfig */,
+				EDC1F45E2D39B4D369D21194 /* Pods-ARNotificationTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3092285722244947006F33D7 = {
 			isa = PBXGroup;
 			children = (
 				3092286222244947006F33D7 /* ARNotificationTest */,
 				3092286122244947006F33D7 /* Products */,
+				0D3B2CDD8F720E9CE413682C /* Pods */,
+				DE5DA714FF212FA14D869B8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,7 +71,6 @@
 		3092286222244947006F33D7 /* ARNotificationTest */ = {
 			isa = PBXGroup;
 			children = (
-				309228752224494F006F33D7 /* Code */,
 				3092286322244947006F33D7 /* AppDelegate.swift */,
 				3092286522244947006F33D7 /* ViewController.swift */,
 				3092286722244947006F33D7 /* Main.storyboard */,
@@ -77,17 +81,12 @@
 			path = ARNotificationTest;
 			sourceTree = "<group>";
 		};
-		309228752224494F006F33D7 /* Code */ = {
+		DE5DA714FF212FA14D869B8F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3092287A222449DB006F33D7 /* ARNotificationView.xib */,
-				309228762224498E006F33D7 /* ARNotification.swift */,
-				30922878222449BB006F33D7 /* ARNotificationView.swift */,
-				3092287C222449F4006F33D7 /* ARNotificationShadowWrapperView.swift */,
-				3092287E22250B58006F33D7 /* ARNotificationSettings.swift */,
-				3092288022250BBE006F33D7 /* ARNotificationType.swift */,
+				629A639E3755765C24A34F82 /* Pods_ARNotificationTest.framework */,
 			);
-			path = Code;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3092287222244948006F33D7 /* Build configuration list for PBXNativeTarget "ARNotificationTest" */;
 			buildPhases = (
+				91F73CD431B2027BAC194F80 /* [CP] Check Pods Manifest.lock */,
 				3092285C22244947006F33D7 /* Sources */,
 				3092285D22244947006F33D7 /* Frameworks */,
 				3092285E22244947006F33D7 /* Resources */,
+				5B6B0960A10C0F1F66051266 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,7 +149,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3092287B222449DB006F33D7 /* ARNotificationView.xib in Resources */,
 				3092286E22244948006F33D7 /* LaunchScreen.storyboard in Resources */,
 				3092286B22244948006F33D7 /* Assets.xcassets in Resources */,
 				3092286922244947006F33D7 /* Main.storyboard in Resources */,
@@ -157,18 +157,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5B6B0960A10C0F1F66051266 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ARNotificationTest/Pods-ARNotificationTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ARNotification/ARNotification.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARNotification.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ARNotificationTest/Pods-ARNotificationTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91F73CD431B2027BAC194F80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARNotificationTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3092285C22244947006F33D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30922879222449BB006F33D7 /* ARNotificationView.swift in Sources */,
 				3092286622244947006F33D7 /* ViewController.swift in Sources */,
 				3092286422244947006F33D7 /* AppDelegate.swift in Sources */,
-				3092288122250BBE006F33D7 /* ARNotificationType.swift in Sources */,
-				309228772224498E006F33D7 /* ARNotification.swift in Sources */,
-				3092287F22250B58006F33D7 /* ARNotificationSettings.swift in Sources */,
-				3092287D222449F4006F33D7 /* ARNotificationShadowWrapperView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +354,7 @@
 		};
 		3092287322244948006F33D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A1093A5D4E77FFA77F33649 /* Pods-ARNotificationTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -331,6 +374,7 @@
 		};
 		3092287422244948006F33D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDC1F45E2D39B4D369D21194 /* Pods-ARNotificationTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

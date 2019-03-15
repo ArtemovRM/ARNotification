@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum ARNotificationType {
+public enum ARNotificationType {
 	case error
 	case success
 	case warning

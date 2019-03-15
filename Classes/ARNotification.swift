@@ -8,19 +8,19 @@
 
 import UIKit
 
-class ARNotification {
+public class ARNotification {
 	
-	static let shared = ARNotification()
+	public static let shared = ARNotification()
 	
 	// Окно, в которое пушим уведомления
-	weak var window: UIWindow?
+	public weak var window: UIWindow?
 	
 	// Настройки
-	var settings: ARNotificationSettings = ARNotificationSettings()
+	public var settings: ARNotificationSettings = ARNotificationSettings()
 	
 	private init() { }
 	
-	func push(type: ARNotificationType, title: String) {
+	public func push(type: ARNotificationType, title: String) {
 		guard let window = self.window,
 			let frame = self.expectedFrame() else {
 			print("ARNotification error: window not set!")

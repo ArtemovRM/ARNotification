@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ARNotification
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

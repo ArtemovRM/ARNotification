@@ -1,0 +1,6 @@
+framework module Pods_ARNotificationTest {
+  umbrella header "Pods-ARNotificationTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
