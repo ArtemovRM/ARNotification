@@ -8,6 +8,6 @@ iOS 9.0+
 
 ## Example
 
-```
+``` swift
 import ARNotification
 ```
