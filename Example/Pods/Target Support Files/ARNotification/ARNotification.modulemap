@@ -1,6 +1,0 @@
-framework module ARNotification {
-  umbrella header "ARNotification-umbrella.h"
-
-  export *
-  module * { export * }
-}
