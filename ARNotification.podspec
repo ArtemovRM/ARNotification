@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = "ARNotification"
-  s.version               = "0.0.1"
+  s.version               = "0.1.0"
   s.summary               = "Lightweight notification for iOS written in Swift"
   s.homepage              = "https://github.com/ArtemovRM/ARNotification.git"
   s.license               = { :type => 'MIT', :file => 'LICENSE' }
