@@ -31,3 +31,5 @@ Next
 ``` swift
 ARNotification.shared.push(type: .error, title: "Unknown error")
 ``` 
+
+![](Examples.gif)
