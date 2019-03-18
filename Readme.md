@@ -1,3 +1,6 @@
+
+[![Build Status](https://travis-ci.org/ArtemovRM/ARNotification.svg?branch=master)](https://travis-ci.org/ArtemovRM/ARNotification)
+
 # ARNotification 
 
 Lightweight notification for iOS written in Swift 
