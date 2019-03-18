@@ -2,11 +2,12 @@
 # * https://www.objc.io/issues/6-build-tools/travis-ci/
 # * https://github.com/supermarin/xcpretty#usage
 
-language: swift
+language: objective-c
+osx_image: xcode10
 # cache: cocoapods
 podfile: Example/Podfile
 before_install:
  - gem install cocoapods
  - pod install --project-directory=Example
 script:
- - xcodebuild -workspace Example/ARNotificationTest.xcworkspace -scheme ARNotificationTest -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+ - xcodebuild test -workspace Example/ARNotificationTest.xcworkspace -scheme ARNotificationTest -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
