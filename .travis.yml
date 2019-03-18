@@ -11,4 +11,4 @@ before_install:
  - pod install --project-directory=Example
 script:
  - set -o pipefail
- - xcodebuild -workspace ARNotificationTest.xcworkspace -scheme ARNotificationTest -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+ - xcodebuild -workspace Example/ARNotificationTest.xcworkspace -scheme ARNotificationTest -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
