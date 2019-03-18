@@ -9,4 +9,4 @@ before_install:
  - gem install cocoapods
  - pod install --project-directory=Example
 script:
- - xcodebuild -workspace Example/ARNotificationTest.xcworkspace -scheme ARNotificationTest -sdk iphonesimulator ONLY_ACTIVE_ARCH=YES
+ - xcodebuild -workspace Example/ARNotificationTest.xcworkspace -scheme ARNotificationTest -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
