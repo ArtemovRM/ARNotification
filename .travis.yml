@@ -7,6 +7,6 @@ language: swift
 podfile: Example/Podfile
 before_install:
  - gem install cocoapods
- - pod install
+ - pod install --project-directory=Example
 script:
  - xcodebuild -workspace Example/ARNotificationTest.xcworkspace -scheme ARNotificationTest -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
