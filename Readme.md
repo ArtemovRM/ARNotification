@@ -1,5 +1,7 @@
 
 [![Build Status](https://travis-ci.org/ArtemovRM/ARNotification.svg?branch=master)](https://travis-ci.org/ArtemovRM/ARNotification)
+[![License](https://img.shields.io/cocoapods/l/ARNotification.svg?color=green)](https://cocoapods.org/pods/ARNotification)
+
 
 # ARNotification 
 
