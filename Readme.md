@@ -43,4 +43,4 @@ Next
 ARNotification.shared.push(type: .error, title: "Unknown error")
 ``` 
 
-![](Examples.gif)
+![](https://github.com/ArtemovRM/ARNotification/blob/master/Examples.gif)
