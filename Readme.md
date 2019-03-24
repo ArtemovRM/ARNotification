@@ -13,7 +13,7 @@ iOS 9.0+
 ###### Via CocoaPods.
 
 To install ARNotification with CocoaPods, add the following lines to your Podfile: 
-```
+``` ruby
 pod 'ARNotification'
 ```
 
