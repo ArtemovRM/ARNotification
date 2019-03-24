@@ -9,6 +9,14 @@ Lightweight notification for iOS written in Swift
 
 iOS 9.0+
 
+## Install
+###### Via CocoaPods.
+
+To install ARNotification with CocoaPods, add the following lines to your Podfile: 
+```
+pod 'ARNotification'
+```
+
 ## Example
 
 For example, set a window for notifications in didFinishLaunchingWithOptions
