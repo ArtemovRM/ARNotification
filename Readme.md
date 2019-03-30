@@ -19,6 +19,11 @@ To install ARNotification with CocoaPods, add the following lines to your Podfil
 pod 'ARNotification'
 ```
 
+###### Via Carthage.
+``` ruby
+github "ArtemovRM/ARNotification"
+```
+
 ## Example
 
 For example, set a window for notifications in didFinishLaunchingWithOptions
