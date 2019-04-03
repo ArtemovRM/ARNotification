@@ -1,5 +1,7 @@
 
 [![Build Status](https://travis-ci.org/ArtemovRM/ARNotification.svg?branch=master)](https://travis-ci.org/ArtemovRM/ARNotification)
+[![License](https://img.shields.io/cocoapods/l/ARNotification.svg?color=green)](https://cocoapods.org/pods/ARNotification)
+[![Swift Version](https://img.shields.io/badge/swift-4.0-orange.svg)](https://developer.apple.com/swift/)
 
 # ARNotification 
 
@@ -8,6 +10,19 @@ Lightweight notification for iOS written in Swift
 ## Requirements
 
 iOS 9.0+
+
+## Install
+###### Via CocoaPods.
+
+To install ARNotification with CocoaPods, add the following lines to your Podfile: 
+``` ruby
+pod 'ARNotification'
+```
+
+###### Via Carthage.
+``` ruby
+github "ArtemovRM/ARNotification"
+```
 
 ## Example
 
@@ -35,4 +50,4 @@ Next
 ARNotification.shared.push(type: .error, title: "Unknown error")
 ``` 
 
-![](Examples.gif)
+![](https://github.com/ArtemovRM/ARNotification/blob/master/Examples.gif)
